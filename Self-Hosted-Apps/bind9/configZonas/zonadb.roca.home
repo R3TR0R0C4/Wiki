@@ -1,0 +1,13 @@
+$TTL    86400
+@       IN      SOA     roca.home. root.roca.home. (
+                              1         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                          86400 )       ; Negative Cache TTL
+;DNSs
+@       IN      NS      ns.roca.home.           ;Servidor DNS
+ns      IN      A       192.168.0.31            ;Servidor DNS
+;IPs
+www     IN      A       192.168.0.31            ;Servidor Web
+intranet        IN      A       192.168.0.32    ;Servidor Web Intranet

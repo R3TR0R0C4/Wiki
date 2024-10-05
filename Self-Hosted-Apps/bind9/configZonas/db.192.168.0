@@ -1,0 +1,14 @@
+$TTL    604800
+@       IN      SOA     roca.home. root.roca.home. (
+                              1         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+;DNSs
+@       IN      NS      root.roca.home.
+
+;IPs
+31      IN      PTR     www.roca.home
+31      IN      PTR     intranet.roca.home
