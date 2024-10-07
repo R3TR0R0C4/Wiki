@@ -1,13 +1,13 @@
-# Cración de un dominio AD
-
+# Creación de un dominio AD
 
 ## Pasos previos
 
-Nos aseguraremos de tener nuestros adaptadores de red configurados correctamente, "Ethernet0" actuarà como un adaptador NAT que darà servicio a nuestro servidor, y lo mantedremos en DHCP, mientras que "Ethernet1" darà servicio a nuestra red interna y lo configuraremos con la ip `172.40.0.1/24`, sin un dns (por el momento), sin gateway, y con "IPv6" desactivado.
+Nos aseguraremos de tener nuestros adaptadores de red configurados correctamente, "Ethernet0" actuara como un adaptador NAT que dará servicio a nuestro servidor, y lo mantendremos en DHCP, mientras que "Ethernet1" dará servicio a nuestra red interna y lo configuraremos con la IP '172.40.0.1/24', sin un DNS (por el momento), sin gateway, y con "IPv6" desactivado.
+
 
 ![](./img/01.png)
 
-## Instalacion
+## Instalación
 
 Para configurar un controlador de dominio usaremos "Agregar roles y características":
 
@@ -15,7 +15,7 @@ Para configurar un controlador de dominio usaremos "Agregar roles y característ
 
 <br>
 
-Seleccionaremos una instalacion basada en caracteristicas o roles:
+Seleccionaremos una instalación basada en características o roles:
 
 ![](./img/03.png)
 
@@ -27,7 +27,7 @@ Seleccionamos `Servicios de dominio de Active Directory`:
 
 <br>
 
-Comprovamos que instalamos los roles que queremos:
+Comprobamos que instalamos los roles que queremos:
 
 ![](./img/05.png)
 
@@ -39,15 +39,15 @@ Y confirmamos que se instala sin problema:
 
 <br>
 
-## Configuracion
+## Configuración
 
-Una vez terminada la instalacion, en el apartado de avisos, podemos ver la opción para "Promover este servidor a controlador de dominio":
+Una vez terminada la instalación, en el apartado de avisos, podemos ver la opción para "Promover este servidor a controlador de dominio":
 
 ![](./img/07.png)
 
 <br>
 
-Seleccionaremos la opcion "Agregar nuevo bosque:
+Seleccionaremos la opción "Agregar nuevo bosque":
 
 ![](./img/08.png)
 
@@ -67,7 +67,7 @@ Revisamos las opciones, y, podemos descargar un script para, si en un futuro, qu
 
 <br>
 
-Comprovamos los requisitos previos, habrà algunos avisos que vamos a ignorar.
+Comprobamos los requisitos previos, habrá algunos avisos que vamos a ignorar.
 
 ![](./img/11.png)
 
