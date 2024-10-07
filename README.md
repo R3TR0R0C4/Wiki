@@ -18,7 +18,8 @@
 
 ## Windows AD
 
-
+* [Set-up](./WindowsAD/windowsADsetup.md)
+* [Creacion de un dominio](./WindowsAD)
 
 
 
@@ -27,5 +28,4 @@
 
 * apache2 reverse-proxy
 * bind9-v2 acabar
-* Cambiar images mdadm
 * Comencar windows ad
