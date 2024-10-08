@@ -22,6 +22,10 @@
 * [Creacion de un dominio](./WindowsAD)
 
 
+# Proxmox
+
+* [Configuracions varies](./proxmox/proxmox.md)
+
 
 
 ## todo
