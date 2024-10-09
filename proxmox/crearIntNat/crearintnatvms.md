@@ -5,21 +5,27 @@ Es necesario contar con una conexión a internet. Por defecto, las instalaciones
 
 Esta és la configuración de la interfaz `vmbr0`:
 
-![](./img/)
+![](./img/01.png)
 
 Debajo de esta crearemos la configuración de `vmbr1`:
 
 ```
 auto vmbr1
 iface vmbr1 inet static
-
+        address 172.20.0.1/24
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+        post-up iptables -t nat -A POSTROUTING -s '172.20.0.0/24' -o vmbr0 -j MASQUERADE
+        post-down iptables -t nat -D POSTROUTING -s '172.20.0.0/24' -o vmbr0 -j MASQUERADE
 ```
 
-Despues editamos `/etc/` y añadimos:
+<br>
 
+Y por ultimo editaremos el archivo `/etc/sysctl.conf`, y descomentamos `net.ipv4.ip_forward=1`:
 
-Y por ultimo aplicamos las reglas de iptables:
+![](./img/02.png)
 
-Las haremos persistentes, instalando `apt install iptables-persistent`
+Y aplicamos los cambios con `sysctl -p`:
 
-$ sudo iptables-save > /etc/iptables/rules.v4
+![](./img/03.png)
