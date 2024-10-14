@@ -3,7 +3,7 @@
 Es necesario contar con una conexión a internet. Por defecto, las instalaciones de Proxmox crean un Linux Bridge en la interfaz seleccionada durante la instalación, generalmente llamada `vmbr0`. En este caso, vamos a crear una nueva interfaz, `vmbr1`, que no estará vinculada a ninguna de las interfaces físicas y usará iptables para realizar NAT. De esta manera, las máquinas virtuales podrán utilizar la IP del host Proxmox.
 
 
-Esta és la configuración de la interfaz `vmbr0`:
+Esta és la configuración de la interfaz `vmbr1`:
 
 ![](./img/01.png)
 
