@@ -55,6 +55,8 @@ Ya a todavía se ejecuta el servidor X de pantallas añadiremos el usuario actua
 
 `xhost +local:`
 
+`xhost +si:localuser:root`
+
 <br>
 
 ## Crontab
