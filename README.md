@@ -15,6 +15,7 @@
 * [mdadm](./Ubuntu/mdadm/mdadmRaidsUbuntu22.md)
 * [netplan](./Ubuntu/netplan/netplan.md)
 * [resolvconf](./Ubuntu/resolv-conf/resolvconf.md)
+* [Automatización con xdotools](./Ubuntu/script-xdotool/xdotool.md)
 
 ## Windows AD
 
@@ -32,4 +33,4 @@
 
 * apache2 reverse-proxy
 * bind9-v2 acabar
-* Comencar windows ad
+* DNS windows ad
