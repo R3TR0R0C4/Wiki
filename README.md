@@ -17,17 +17,20 @@
 * [resolvconf](./Ubuntu/resolv-conf/resolvconf.md)
 * [Automatización con xdotools](./Ubuntu/script-xdotool/xdotool.md)
 
+<br>
+
 ## Windows AD
 
 * [Set-up](./WindowsAD/windowsADsetup.md)
 * [Creacion de un dominio](./WindowsAD)
 
+<br>
 
 # Proxmox
 
 * [Configuraciones varies](./proxmox/proxmox.md)
 
-
+<br>
 
 ## todo
 
