@@ -25,7 +25,7 @@
 
 # Proxmox
 
-* [Configuracions varies](./proxmox/proxmox.md)
+* [Configuraciones varies](./proxmox/proxmox.md)
 
 
 
