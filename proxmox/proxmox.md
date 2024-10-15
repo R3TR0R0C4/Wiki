@@ -1,4 +1,3 @@
 # Proxmox
 
-
-[Crear una interfaz NAT para VMs](./crearIntNat/crearintnatvms.md)
+[Crear una interfaz NAT para VMs y port forwarding](./crearIntNat/crearintnatvms.md)
