@@ -1,9 +1,9 @@
 ## Crear una interfaz NAT para las Máquinas Virtuales
 
-Es necesario contar con una conexión a internet. Por defecto, las instalaciones de Proxmox crean un Linux Bridge en la interfaz seleccionada durante la instalación, generalmente llamada `vmbr0`. En este caso, vamos a crear una nueva interfaz, `vmbr1`, que no estará vinculada a ninguna de las interfaces físicas y usará iptables para realizar NAT. De esta manera, las máquinas virtuales podrán utilizar la IP del host Proxmox.
+Por defecto, las instalaciones de Proxmox crean un Linux Bridge en la interfaz seleccionada durante la instalación, generalmente llamada `vmbr0`. En este caso, vamos a crear una nueva interfaz, `vmbr1`, que no estará vinculada a ninguna de las interfaces físicas y usará iptables para realizar NAT. De esta manera, las máquinas virtuales podrán utilizar la IP del host Proxmox.
 
 
-Esta és la configuración de la interfaz `vmbr0`:
+Esta és la configuración de la interfaz `vmbr1`:
 
 ![](./img/01.png)
 
@@ -22,7 +22,9 @@ iface vmbr1 inet static
 
 <br>
 
-Y por ultimo editaremos el archivo `/etc/sysctl.conf`, y descomentamos `net.ipv4.ip_forward=1`:
+## Configuración NAT
+
+Necesitamos editar el archivo `/etc/sysctl.conf`, y descomentamos `net.ipv4.ip_forward=1`, de esta forma habilitaremos la modificación de paquetes y de esta forma hacer NAT.
 
 ![](./img/02.png)
 
