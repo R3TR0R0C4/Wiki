@@ -80,7 +80,7 @@ Esta és la configuración de cada una de las redes, enp0s3 para acceso a intern
 
         Tambien necesitamos configurar las zonas reversas, habran tantas zonas reversas como directas, en esta tambien necesitamos configurar el nombre de la zona (acostumamos a poner la subnet, seguido de "in-addr.arpa" para identificar cada subred), seguido del tipo, si es de tipo slave necesitamos configurar la IP maestra, y el archivo tambien en <strong>ruta absoluta</strong>:
 
-        ![](./img/bind9_5_1.png)
+        ![](./img/bind9_6.png)
 
 <br>
 
@@ -88,4 +88,35 @@ Esta és la configuración de cada una de las redes, enp0s3 para acceso a intern
 
     Usando "named-checonf -p named.conf.local" compovaremos que no haya ningun error de sintaxis:
 
-    ![](./img/bind9_6_1.png)
+    ![](./img/bind9_7.png)
+
+<br>
+
+## Configuracion de zonas
+
+Empezaremos a configurar las zonas del servidor con las plantillas `db.empty` para las zonas directas, y `db.255` para las zonas inversas: 
+
+![](./img/bind9_8.png)
+
+<br>
+
+Esta és la configuracion por defecto de un archivo de zona `db.empty`:
+
+![](./img/bind9_9.png)
+
+Para adaptarlo a nuestras necesidades necesitamos cambiar los siguientes campos:
+
+* **SOA** : esta és la Start of Authority, reemplazamos `localhost.` por `ns1.informatica.com`, para especificar el servidor primario
+* **SOA** : `root.localhost.` por `admin.informatica.com.` para cambiar el correo del administrador.
+* **NS** : `localhost.` por `ns1.informatica.com.`
+* **A** : Añadido registros 
+
+
+
+NS (Name Servers):
+
+Replaced localhost with ns1.informatica.com. and added ns2.informatica.com. for redundancy.
+A Records:
+
+An A record is added for the domain itself (@ refers to the domain root, in this case, informatica.com), pointing to the server's IP address.
+Added A records for ns1 and ns2, which should point to their respective IP addresses.
